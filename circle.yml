@@ -8,6 +8,8 @@ machine:
 dependencies:
   pre:
     - gem install bundler --pre
+    - chmod +x ./install.sh
+    - chmod +x ./build.sh
   override:
     - ./install.sh
     - ./build.sh
