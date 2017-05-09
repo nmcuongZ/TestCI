@@ -4,7 +4,6 @@ language: objective-c
 rvm:
 - 2.1.2
 before_install:
-- chmod +x ./Scripts/install.sh
 - chmod +x ./Scripts/build.sh
 install:
 - ./Scripts/install.sh
@@ -14,3 +13,4 @@ deploy:
   provider: heroku
   api_key:
     secure: "9a332d4c-ec9d-4e62-ace7-a58a1b12801c"
+    app: limitless-earth-68352
