@@ -10,3 +10,7 @@ install:
 - ./Scripts/install.sh
 script:
 - ./Scripts/build.sh
+deploy:
+  provider: heroku
+  api_key:
+    secure: "9a332d4c-ec9d-4e62-ace7-a58a1b12801c"
