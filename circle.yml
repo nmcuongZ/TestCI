@@ -10,9 +10,9 @@ dependencies:
     - gem install bundler --pre
     - chmod +x ./install.sh
     - chmod +x ./build.sh
-commands:
-- ./Scripts/install.sh
-- ./Scripts/build.sh
+  override:
+    - ./install.sh
+    - ./build.sh
 test:
   override:
     - echo nope
