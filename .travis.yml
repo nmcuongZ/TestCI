@@ -3,6 +3,8 @@
 language: objective-c
 rvm:
 - 2.1.2
+before_install:
+- chmod +x install.sh
 install:
 - ./Scripts/install.sh
 script:
