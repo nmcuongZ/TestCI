@@ -36,3 +36,4 @@ cat $(pwd)/unity.log
 cd Builds/iOS
 xcodebuild -project Unity-iPhone.xcodeproj -scheme Unity-iPhone clean build CONFIGURATION_BUILD_DIR=$CIRCLE_ARTIFACTS
 
+
