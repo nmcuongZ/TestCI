@@ -5,8 +5,6 @@ rvm:
 - 2.1.2
 before_install:
 - chmod +x ./Scripts/build.sh
-install:
-- ./Scripts/install.sh
 script:
 - ./Scripts/build.sh
 deploy:
