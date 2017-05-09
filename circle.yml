@@ -1,9 +1,8 @@
 machine:
 
-  # Add some environment variables
-  environment:
-    CIRCLE_ENV: test
-    DATABASE_URL: postgresql://ubuntu:@127.0.0.1:5432/circle_test
+  xcode:
+    version: 8.2
+  
     
 dependencies:
   pre:
