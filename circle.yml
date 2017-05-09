@@ -1,7 +1,4 @@
 machine:
-    timezone:
-    America/Los_Angeles # Set the timezone
-
   # Version of ruby to use
   ruby:
     version:
