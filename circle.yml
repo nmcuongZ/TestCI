@@ -1,17 +1,16 @@
-# Example Travis config. See the entire example: https://github.com/JonathanPorta/ci-build
+machine:
+  environment:
+    XCODE_SCHEME: nope
+    XCODE_PROJECT: nope
+    XCODE_WORKSPACE: nope
+dependencies:
+  override:
+    - curl -o Unity.pkg http://netstorage.unity3d.com/unity/b7e030c65c9b/MacEditorInstaller/Unity-5.4.2f2.pkg
+    - curl -o Unity-iOS.pkg http://netstorage.unity3d.com/unity/b7e030c65c9b/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.4.2f2.pkg
+    - sudo installer -dumplog -package Unity.pkg -target /
+    - sudo installer -dumplog -package Unity-iOS.pkg -target /
 
-language: objective-c
-rvm:
-- 2.1.2
-before_install:
-- chmod +x ./Scripts/install.sh
-- chmod +x ./Scripts/build.sh
-install:
-- ./Scripts/install.sh
-script:
-- ./Scripts/build.sh
-deploy:
-  provider: heroku
-  api_key:
-    secure: "9a332d4c-ec9d-4e62-ace7-a58a1b12801c"
-    app: limitless-earth-68352
+    - ./build.sh
+test:
+  override:
+    - echo nope
